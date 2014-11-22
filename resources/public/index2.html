@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8"/>
+    <title>Document</title>
+    <style>
+     body {
+       margin: 0;
+       padding: 0;
+       background-color: #000000;
+     }
+    </style>
+  </head>
+  <body>
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/pixi.js/1.6.1/pixi.js"></script>
+    <script>
+
+     var stage = new PIXI.Stage(0x6F6A99);
+     var renderer = PIXI.autoDetectRenderer(800, 600);
+     document.body.appendChild(renderer.view);
+     var texture = PIXI.Texture.fromImage("images/traxes.png");
+     var hero = new PIXI.Sprite(texture);
+     hero.anchor.x = 0.5;
+     hero.anchor.y = 0.5;
+     hero.position.x = 400;
+     hero.position.y = 300;
+     var text = new PIXI.Text("Pixi.js can has text!",
+                              {font:"20px Arial", fill:"red"});
+     text.setText("Oh hai!");
+     stage.addChild(text);
+     stage.addChild(hero);
+     renderer.render(stage);
+
+    </script>
+
+  </body>
+</html>
