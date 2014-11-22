@@ -27,7 +27,7 @@ app.controller("init",function ($scope,$resource){
             actual = actual.substr(1,actual.length);
             if(actual.length == 2){
                 WordsList.splice(0,1);
-                text.position.x = Math.random()*600;
+                text.position.y = Math.random()*600;
                 actual = WordsList[0];
             }
         }
